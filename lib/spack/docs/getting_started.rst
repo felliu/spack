@@ -1582,6 +1582,7 @@ to your ``PATH`` in this case.
 .. note::
 
    Spack currently supports Python versions later than 3.2 inclusive.
+
 """
 Git
 """
@@ -1632,9 +1633,10 @@ with
   If you chose to install Spack into a directory on Windows that is set up to require Administrative
   Privleges*, Spack will require elevated privleges to run.
 
-  *Administrative Privleges can be denoted either by default such as
+  * Administrative Privleges can be denoted either by default such as
   `C:\Program Files`, or aministrator applied administrative restrictions
   on a directory that spack installs files to such as `C:\Users\`
+
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 Step 3: Run and configure Spack
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -1712,6 +1714,7 @@ and not tabs, so ensure that this is the case when editing one directly.
    The use of Cygwin is not officially supported by Spack and is not tested.
    However Spack will not throw an error, so use if choosing to use Spack
    with Cygwin, know that no functionality is garunteed.
+
 ^^^^^^^^^^^^^^^^^
 Step 4: Use Spack
 ^^^^^^^^^^^^^^^^^
