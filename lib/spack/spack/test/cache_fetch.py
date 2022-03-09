@@ -19,7 +19,7 @@ def test_fetch_missing_cache(tmpdir, _fetch_method):
     """Ensure raise a missing cache file."""
     testpath = str(tmpdir)
     with spack.config.override('config:url_fetch_method', _fetch_method):
-        fetcher = CacheURLFetchStrategy(url='file:///not-a-real-cache-file')
+        fetcher = CacheURLFetchStrategy(url='file://not-a-real-cache-file')
         with Stage(fetcher, path=testpath):
             with pytest.raises(NoCacheError, match=r'No cache'):
                 fetcher.fetch()
@@ -31,7 +31,7 @@ def test_fetch(tmpdir, _fetch_method):
     testpath = str(tmpdir)
     cache = os.path.join(testpath, 'cache.tar.gz')
     touch(cache)
-    url = 'file:///{0}'.format(cache)
+    url = 'file://{0}'.format(cache)
     with spack.config.override('config:url_fetch_method', _fetch_method):
         fetcher = CacheURLFetchStrategy(url=url)
         with Stage(fetcher, path=testpath) as stage:
